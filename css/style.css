@@ -1,0 +1,579 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+.active {
+  top: 50px;
+  left: 0 !important;
+  transition: all 0.5s ease-in;
+}
+
+.center {
+  text-align: center;
+}
+.logo-font {
+  font-family: 'Hi Melody', cursive;
+}
+.nav-toggle {
+  display: none;
+}
+
+.firstBackground-container {
+  background-image: url(../images/TSMihajloPupin.jpg);
+  background-size: 100% 100%;
+  background-attachment:
+  background-repeat: no-repeat;
+}
+.zatamljenje {
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1));
+  /*background-color: rgb(0,0,0,0.7);*/
+}
+.navigation-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 500ms ease-in;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 1% 0%;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.fixed {
+  background-color: rgba(38, 38, 38, 1);
+  transition: all 500ms ease-in;
+  padding: 0% 0%;
+}
+.right-side {
+  padding-right: 1%;
+  width: 50%;
+  text-align: center;
+}
+.left-side {
+  width: 35%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.left-side img {
+  width: 75px;
+  height: 75px;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 4%;
+}
+.firstTextHolder {
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 10% 0%;
+}
+.total-holder {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.text-holder {
+  width: 70%;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.logoInText {
+  width: 350px;
+  height: 350px;
+}
+.firsthr {
+  width: 40%;
+  border: 1px solid #F45313;
+  border-radius: 30%;
+}
+.orange {
+  color: #F45313;
+}
+.navigation-text {
+  color: white;
+  font-size: 24px;
+  margin-left: 5%;
+  transition: all .5s ease-in;
+}
+.navigation-text first-child {
+  margin-left: 0;
+}
+
+.navigation-text:hover {
+  color: #F45313;
+}
+
+.main {
+  font-size: 50px;
+}
+.school-name {
+  font-size: 35px;
+  color: white;
+  margin-top: 6%;
+}
+.place {
+  font-size: 30px;
+  font-weight: bold;
+}
+.main-button {
+  /*background-color: rgba(0,255,0,0.3);  green one
+  border-color: green;*/
+  background-color: #F45313;
+  border-color: #F45313;
+  border-radius: 15px;
+  padding: 2%;
+  font-size: 20px;
+  margin-top: 7%;
+  color: white;
+}
+
+/* info start */
+
+.main-info {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding: 5% 0% 0% 0%;
+}
+
+.sektor-holder {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.sektor-holder img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sektor-container {
+  width: 50%;
+  position: relative;
+}
+.overlay-text:hover > .sektor-name {
+  transition: all .5s ease-in;
+  top: 30%;
+}
+.overlay-text:hover > .sektor-spliter {
+  transition: all .5s ease-in;
+  top: 40%;
+}
+.overlay-text:hover > .sektor-desc {
+  opacity: 1;
+  transition: all 1s ease-in;
+}
+.overlay-text:hover > .expand-button {
+  opacity: 1;
+  transition: all 1s ease-in;
+}
+
+.main-info img {
+  max-width: 50%;
+  height: auto;
+  margin: 3%;
+}
+.small-orange-hr {
+  width: 13%;
+  margin: 3% 0;
+  border: 1px solid #F45313;
+  border-radius: 10%;
+}
+.main-info p {
+  font-size: 21px;
+  color: grey;
+}
+.mainholder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainholder h2 {
+  font-size: 40px;
+}
+
+.overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: white;
+}
+.sektor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*opacity: 0;*/
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sektor-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  font-size: 17px;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .5s ease-in;
+}
+.sektor-spliter {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  border: 1px solid white;
+  border-radius: 30px;
+  width: 20%;
+  margin: 0 auto;
+  transition: all .5s ease-in;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.sektor-name {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  color: white;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  opacity: 1 !important;
+  transition: all .5s ease-in;
+  text-align: center;
+  width: 100%;
+}
+.expand-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 500ms ease-in;
+  font-size: 20px;
+  padding: 1% 5%;
+  margin-top: 3%;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+.expand-button:hover {
+  transition: all 0.5s ease-in;
+  background-color: #F45313;
+  border-color: #F45313;
+}
+
+.expandable {
+  display: none;
+  background-color: rgba(0, 3, 25, 0.9);
+  color: white;
+}
+
+/* smer start */
+
+.smer-element {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  flex-direction: row;
+  margin: 4%;
+}
+.smer-element img {
+  max-width: 30%;
+  height: auto;
+  padding: 0% 5%;
+}
+.smer-element h3 {
+  font-size: 25px;
+  margin-top: 0;
+}
+.smer-element p {
+  font-size: 20px;
+  color: gainsboro;
+}
+.smer-spliter {
+  width: 10%;
+  border: 1px solid transparent;
+  color: #F45313;
+  border-color: #F45313;
+  margin: 2% auto;
+}
+
+/* passer start */
+
+.backgroundImage-Passer {
+  background-image: url(../images/vesti.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+}
+.passerBlackOverlay {
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.pre-galery {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+.galery-spliter {
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+/* news css start */
+
+.news-holder {
+  width: 80%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: row;
+  margin-top: 2%;
+  padding-bottom: 8%;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: 2%;
+
+}
+.news-text-holder {
+  display:flex;
+  flex-direction: column;
+}
+.news-image-holder {
+  margin: 2%;
+  width: 100%;
+  height: auto;
+}
+.news-title {
+  margin: 1% 0%;
+}
+.news-image-holder img {
+  height: auto;
+  max-width: 100%;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+.news-date {
+  color: grey;
+  margin: 0;
+  font-size: 10px;
+}
+/* news css end */
+
+/* galery css start */
+
+.galery-holder {
+  width: 90%;
+  margin: 4% auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.galery-image-slot {
+  width: 28%;
+  height: 100%;
+}
+.galery-image-slot img {
+  width: 100%;
+  height: auto;
+  border: 2px solid transparent;
+  transition: all 0.5s ease-in;
+}
+.galery-image-slot img:hover {
+  opacity: 0.9;
+  border: 2px solid black;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+.big-image-container {
+  position: relative;
+  display: none;
+  padding-bottom: 4%;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.big-image-container img {
+  width: 100%;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* contact css start */
+
+.contact-holder {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.9);
+  color:white;
+  padding: 5% 3%;
+}
+.contact-text-holder {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-text-holder p {
+  margin: 1.5% 0%;
+}
+.contact-img-holder {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.contact-img-holder img {
+  max-width: 50%;
+  height: auto;
+}
+footer {
+  text-align: center;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: grey;
+}
+footer a{
+  margin: 0;
+  color: grey;
+  text-decoration: none;
+}
+footer p {
+  margin: 0;
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .navigation-holder {
+    padding: 0;
+    position: static;
+  }
+  .main {
+    font-size: 40px;
+  }
+  .school-name {
+    font-size: 25px;
+  }
+  .main-button {
+    padding: 5%;
+  }
+  .main-info {
+    flex-direction: column;
+  }
+  .main-info img {
+    max-width: none;
+    width: 100%;
+    margin: 3% 0%;
+  }
+  .nav-toggle {
+    display: block;
+    color: white;
+    margin: 5%;
+  }
+  .left-side img {
+    width: 45px;
+    height: 45px;
+  }
+  .right-side {
+    position: absolute;
+    left: -101%;
+    top: 55px;
+    transition: all 0.5s ease-in;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .right-side a {
+    margin: 2% 0%;
+  }
+  .sektor-holder {
+    flex-direction: column;
+  }
+  .sektor-container {
+    width: 100%;
+  }
+  .smer-element {
+    flex-direction: column;
+  }
+  .smer-element img {
+    width: 100%;
+    max-width: none;
+    margin: 3% 0%;
+    padding: 0;
+  }
+  .backgroundImage-passer {
+    height: 30%;
+  }
+  .pre-galery {
+    font-size: 30px;
+  }
+  .contact-holder {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .contact-text-holder {
+    width: 100%;
+  }
+  .overlay-text:hover > .sektor-name {
+    transition: all .5s ease-in;
+    top: 20%;
+  }
+  .overlay-text:hover > .sektor-spliter {
+    transition: all .5s ease-in;
+    top: 30%;
+  }
+  .sektor-desc {
+    font-size: 14px;
+  }
+  .expand-button {
+    top: 80%;
+  }
+}
