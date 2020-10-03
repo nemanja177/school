@@ -12,13 +12,15 @@ $(window).bind('scroll', function() {
 });
 
 $(".image").click(function($this) {
-  let imgsrc = $(this).attr("src");
-  if( $(".big-image-container").is(":visible") ) {
-    $("#big-image").attr("src", imgsrc);
-  } else {
-    $("#big-image").attr("src", imgsrc);
-    $(".big-image-container").slideToggle(500);
-  }
+  if ( window.innerWidth >= 800 ) {
+    let imgsrc = $(this).attr("src");
+    if( $(".big-image-container").is(":visible") ) {
+      $("#big-image").attr("src", imgsrc);
+    } else {
+      $("#big-image").attr("src", imgsrc);
+      $(".big-image-container").slideToggle(500);
+    }
+  } 
 });
 
 $(".nav-toggle").click(function() {

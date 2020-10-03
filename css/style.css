@@ -576,4 +576,10 @@ footer p {
   .expand-button {
     top: 80%;
   }
+  .galery-holder {
+    flex-direction: column;
+  }
+  .galery-image-slot {
+    width: 100%;
+  }
 }
